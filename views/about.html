@@ -1,0 +1,428 @@
+<div ng-controller="aboutController as controller">
+    <!-- Page title -->
+    <div class="page-title-wrapper about-title-wrapper">
+        <div class="pattern-dark-wrapper">
+            <div class="container">
+                <h2 class="page-title page-title-margin">{{translation.someWords}}<br><span class="page-title-main">{{translation.aboutUs}}</span></h2>
+            </div>
+        </div>
+    </div>
+    <!-- End Page title -->
+
+    <!-- Begin main content -->
+    <div class="container page-content-wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="page__text"><strong>{{translation.eipHead}}</strong> {{translation.eipContent}}</p>
+
+                <p class="page__text"><strong>{{translation.groupHead}}</strong> {{translation.groupContent}} </p>
+
+                <div class="divider-circle divider-circle--light"></div>
+            </div>
+        </div>
+        <!-- End row -->
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="section-title">MediaMotion<span class="text-highlight">Timeline</span></h2>
+                </div>
+            </div>
+            <!-- End row -->
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <div class="dateline">
+
+                <div class="timeline__year"><span class="circle"></span>2013</div>
+                <div class="timeline__event bottom" data-date="Wed Feb 21 2010">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">{{translation.september}}</h5>
+
+                        <p class="timeline__text">{{translation.itemSeptember2013}}</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event top special" data-date="Sat May 14 2010">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">{{translation.december}}</h5>
+
+                        <p class="timeline__text">{{translation.itemDecember2013}}</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+
+                <div class="timeline__year"><span class="circle"></span>2014</div>
+				<div class="timeline__event bottom special" data-date="Wed Jun 21 2010">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">{{translation.january}}</h5>
+
+                        <p class="timeline__text">{{translation.itemJanuary2014}}</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+					
+				<div class="timeline__event top" data-date="Wed Dec 21 2010">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">{{translation.february}}</h5>
+
+                        <p class="timeline__text">{{translation.itemFebruary2014}}</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+				
+				<div class="timeline__year"><span class="circle"></span>2015</div>
+                <div class="timeline__event bottom" data-date="Wed Jun 08 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">{{translation.january}}</h5>
+
+                        <p class="timeline__text">{{translation.itemJan2015}}</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+				<!--
+                <div class="timeline__event top special" data-date="Wed Feb 21 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">February</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event bottom" data-date="Tue Mar 09 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">March</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event top special" data-date="Sat May 14 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">May</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event bottom" data-date="Wed Jun 21 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">June</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event top" data-date="Tue Aug 09 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">August</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event bottom special" data-date="Sat Oct 14 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">October</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+                <div class="timeline__event top" data-date="Wed Dec 21 2011">
+                    <div class="timeline__block">
+                        <h5 class="timeline__date">December</h5>
+
+                        <p class="timeline__text">Fusce aliquet euismod luctus. Aliquam scelerisque tincidunt risus nec
+                            pellentesque.</p>
+                    </div>
+                    <span class="circle"></span><span class="line"></span>
+                </div>
+
+
+                <div class="timeline__year"><span class="circle"></span>2016</div>-->
+            </div>
+        </div>
+        <!-- End Timeline -->
+    </section>
+    <section class="container team">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="divider-circle divider-circle--light"></div>
+
+                <h2 class="section-title">MediaMotion<span class="text-highlight">Team</span></h2>
+
+                <!-- Team slider -->
+                <div class="swiper-controls">
+                    <a class="prev-arrow" href="#"></a>
+                    <a class="next-arrow" href="#"></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="swiper-container team__slider">
+                    <div class="swiper-wrapper">
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/barate_q.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Quentin Barate</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-pinterest"
+                                                                href="http://pinterest.com/oliagozha/" target="_blank">
+                                        &nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-facebook"
+                                                                href="http://www.facebook.com/people/@/http://www.facebook.com/olia.gozha"
+                                                                target="_blank">&nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/charle_a.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Maxime Charles</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://www.google.com/+maximeCHARLES1"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://fr.linkedin.com/pub/maxime-charles/a4/8ba/164/"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-facebook"
+                                                                href="https://www.facebook.com/maxime.charles.lyon"
+                                                                target="_blank">&nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/devun_a.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Arthur Devun</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-facebook"
+                                                                href="http://www.facebook.com/people/@/http://www.facebook.com/olia.gozha"
+                                                                target="_blank">&nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/caso_r.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Rafaël Caso</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/belia-_r.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Romain Belia-bourgeois</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/cherie_p.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Pierre-etienne Cheriere</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/perra_l.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Luca Perra</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+
+                        <!-- Person -->
+                        <div class="swiper-slide">
+                            <div class="person">
+                                <a class="person__photo-holder" href="#">
+                                    <img class="person__photo" src="http://cdn.local.epitech.net/userprofil/profilview/brunet_v.jpg" alt="">
+                                </a>
+
+                                <div class="divider-triangle">&nbsp;</div>
+                                <a class="person__name" href="#">Vincent Brunet</a>
+
+                                <p class="person__detail">Software Engineer</p>
+
+                                <p class="person__text"></p>
+                                <ul class="social">
+                                    <li class="social__item"><a class="icon-circle fa fa-google-plus"
+                                                                href="https://plus.google.com/u/0/100180333527158639883/posts"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-linkedin"
+                                                                href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                                                                target="_blank">&nbsp;</a></li>
+                                    <li class="social__item"><a class="icon-circle fa fa-twitter"
+                                                                href="http://twitter.com/@OliaGozha" target="_blank">
+                                        &nbsp;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Person -->
+                    </div>
+                </div>
+                <!-- End Team slider -->
+
+                <div class="divider-circle divider-circle--light"></div>
+            </div>
+        </div>
+        <!-- End row -->
+        <div class="row about__contact">
+            <div class="col-sm-8 col-md-9">
+                <p class="page__text"><strong>{{translation.contactUsHeader}}</strong> {{translation.contactUsText}}</p>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <div class="contact__button-wrapper">
+                    <a class="btn btn-info btn-wider contact__button btn--highlight" href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+    </section>
+    <!-- End main content -->
+</div>

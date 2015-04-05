@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="MediaMotionApplication">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="telephone=no" name="format-detection">
+    <!--Remove styling of telephone numbers on IOS-->
+    <meta name="description" content="A Template by Designzway Team">
+    <!--Change content-->
+    <meta name="keywords" content="HTML, LESS, CSS, JavaScript">
+    <!--Change content-->
+    <meta name="author" content="Designzway Team">
+    <!--Change content-->
+    <title>MediaMotion - Explore your computer in motion</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/external/octions/octicons.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=1" rel="stylesheet">
+    <!-- Stylesheet -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="appController" ng-class="{error: isErrorPage}" class="page-on-load">
+<div ng-spinner-bar class="page-spinner-bar">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+<div class="wrapper">
+    <!-- Begin header -->
+    <header>
+        <div class="presentation">
+            <!-- Begin main navigation -->
+            <div class="main-nav">
+
+                <div class="divider-circle"></div>
+
+                <nav class="container">
+                    <!-- Logo -->
+                    <div class="logo pull-left">
+                        <a ui-sref="home">
+                            <!-- Remove comments to choose image and add comment to h1 -->
+                            <!--<img class="logo-img" src="images/logo.png" alt="Appic logo">-->
+                            <h1 class="logo-text">Media<span class="text-highlight">Motion</span></h1>
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+
+                    <!-- Main navigation-->
+                    <div class="pull-right" id="navigation-box">
+                        <a id="navigation-toggle" href="#">
+                            <span class="menu-icon"></span>
+                        </a>
+                        <ul id="navigation">
+                            <li><a ui-sref="home">{{globalTranslation.homeButton}}</a></li>
+                            <li><a ui-sref="about">{{globalTranslation.aboutButton}}</a></li>
+                            <li><a ui-sref="howitworks">{{globalTranslation.howitworksButton}}</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- End main navigation -->
+        </div>
+        <!-- End presentation-->
+    </header>
+    <!-- End header -->
+    <div ui-view style="min-height: 400px;">
+    </div>
+
+    <!--Begin footer -->
+    <footer class="footer-wrapper">
+        <!--Begin footer widget-->
+        <div class="container footer-widgets">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 col-lg-6 widget-news">
+                    <h3 class="widget-title">{{globalTranslation.newsHeader}}</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-12">
+                            <p class="widget-news__text">{{globalTranslation.newsText}}</p>
+                            <!-- subscribe form -->
+                            <form class="subscribe-form" id="subscribe-form" name="subscribe-form" method="post"
+                                  action="getEmail.php" novalidate>
+                                <input class="subscribe-input" id="input-email" name="input-email" type="email"
+                                       placeholder="your email here" disabled>
+                                <button class="submit-button" id="submit-button" type="submit" disabled>
+                                    <i class="icon-circle icon-circle--thin fa fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-sm-6 col-md-12">
+                            <address class="widget-contacts">
+                                <span class="widget-contacts__item"><i
+                                        class="icon-circle icon-circle--thin fa fa-envelope"></i><a
+                                        href="mailto:eip-mediamotion@googlegroups.com">MediaMotion Email</a></span>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 widget-tweets">
+                    <h3 class="widget-title"><a href="{{git.html_url}}" target="_blank" id="linkOurGit">Our Github</a>
+                    </h3>
+                    <div>
+                        <p><i class="octicon octicon-history"></i> {{git.commit_count}} commits</p>
+                    </div>
+                    <div>
+                        <p><i class="octicon octicon-git-branch"></i> {{git.branche_count}} branches</p>
+                    </div>
+                    <div>
+                        <p><i class="octicon octicon-tag"></i> {{git.release_count}} releases</p>
+                    </div>
+                    <div>
+                        <p><i class="octicon octicon-organization"></i> {{git.contributor_count}} contributors</p>
+                    </div>
+                </div>
+				<div class="col-sm-12 col-md-8 col-lg-3 widget-tweets">
+					<h3 class="widget-title">Our continuous integration</h3>
+					<div>
+						<p class="col-sm-7">LeapMotion Library :</p>
+						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_LeapMotion)/statusIcon"/>
+					</div>
+					<div>
+						<p class="col-sm-7">Unity3D UI : </p>
+						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_Unity)/statusIcon"/>
+					</div>
+					<div>
+						<p class="col-sm-7">Integration : </p>
+						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_Re7)/statusIcon"/>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!--End footer widget -->
+        <!--Begin footer secondary -->
+        <div class="footer-secondary">
+
+            <div class="divider-circle"></div>
+
+            <div class="container">
+                <ul class="social">
+                    <li class="social__item custom-tooltip tooltip--info" title="pinterest">
+                        <a class="icon-circle fa fa-pinterest" href="http://pinterest.com/oliagozha/"
+                           target="_blank"></a>
+                    </li>
+                    <li class="social__item custom-tooltip tooltip--info" title="google">
+                        <a class="icon-circle fa fa-google-plus"
+                           href="https://plus.google.com/u/0/100180333527158639883/posts" target="_blank"></a>
+                    </li>
+                    <li class="social__item custom-tooltip tooltip--info" title="linkedin">
+                        <a class="icon-circle fa fa-linkedin" href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
+                           target="_blank"></a>
+                    </li>
+                    <li class="social__item custom-tooltip tooltip--info" title="twitter">
+                        <a class="icon-circle fa fa-twitter" href="http://twitter.com/@OliaGozha" target="_blank"></a>
+                    </li>
+                    <li class="social__item custom-tooltip tooltip--info" title="facebook">
+                        <a class="icon-circle fa fa-facebook"
+                           href="http://www.facebook.com/people/@/http://www.facebook.com/olia.gozha"
+                           target="_blank"></a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <small class="small">&copy; MediaMotion, 2014-2015. All rights reserved. By MediaMotion Group.
+                    </small>
+                    <small>Template <a href="http://themeforest.net/user/olechka?ref=olechka">by Designzway</a></small>
+                </div>
+            </div>
+        </div>
+        <!--End footer secondary -->
+    </footer>
+    <!--End footer -->
+</div>
+
+<!--End wrapper -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--Script jQuery-->
+<script>window.jQuery || document.write('<script src="external/jquery/jquery-1.11.0.min.js"><\/script>')</script>
+<!--Script jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<!--Script AngularJs-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs//1.2.28/angular-cookies.min.js"></script>
+<!--Script Angular Cookies-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs//1.2.28/angular-resource.min.js"></script>
+<!--Script Angular Resources-->
+<script src="assets/external/angular/angular-ui-router/angular-ui-router.min.js"></script>
+<!--Script AngularJs Ui Router-->
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<!--Script jQuery UI-->
+<script src="assets/external/jquery/jquery-migrate-1.2.1.min.js"></script>
+<!--Script jQuery for old version jQuery-->
+<script src="assets/external/bootstrap/js/bootstrap.min.js"></script>
+<!--Bootstrap JavaScript-->
+<script src="assets/external/jquery-event/jquery.event.drag-2.2.js"></script>
+<!--Script jquery event Drag-->
+<script src="assets/external/jquery-event/jquery.event.drop-2.2.js"></script>
+<!--Script jquery event Drop-->
+<script src="assets/external/jquery-easing/jquery.easing.1.3.js"></script>
+<!--Script jquery Easing-->
+<script src="assets/external/jquery-roundabout/jquery.roundabout.min.js"></script>
+<!--Script Roundabout-->
+<script src="assets/external/swiper/idangerous.swiper.min.js"></script>
+<!--Script Swiper slider -->
+<script src="assets/external/gozha-nav/jquery.mobile.menu.js"></script>
+<!--Script Mobile menu-->
+<script src="assets/external/modernizr/modernizr.custom.91224.js"></script>
+<!--Script Modernizr-->
+<script src="assets/external/colorbox/jquery.colorbox.js"></script>
+<!--Script Сolorbox-->
+<script src="assets/external/jquery-bxslider/jquery.bxslider.min.js"></script>
+<!--Script Bxslider -->
+<script src="assets/external/swiper/idangerous.swiper.min.js"></script>
+<!--Script Swiper slider -->
+<script src="assets/external/jquery-timeline/jquery.timelineG.js"></script>
+<!--Script Timeline-->
+<script src="assets/external/jquery-fitvids/jquery.fitvids.js"></script>
+<!--Script Fitvids -->
+<script src="app/app.js"></script>
+<!--Script Application-->
+<script src="assets/js/form.js"></script>
+<!--Script Forms -->
+<script src="assets/js/custom.js"></script>
+<!--Script Custom-->
+<!--Begin Directives-->
+<script src="app/directives/spinnerBar.js"></script>
+<!--End Directives-->
+<!--Begin Services-->
+<script src="app/services/translationService.js"></script>
+<script src="app/services/githubService.js"></script>
+<!--End Services-->
+<!--Begin Controllers -->
+<script src="app/controllers/baseController.js"></script>
+<script src="app/controllers/homeController.js"></script>
+<script src="app/controllers/aboutController.js"></script>
+<script src="app/controllers/howitworksController.js"></script>
+<script src="app/controllers/errorController.js"></script>
+<!--End Controllers -->
+
+</body>
+</html>
