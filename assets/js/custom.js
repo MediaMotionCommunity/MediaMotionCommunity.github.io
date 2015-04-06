@@ -81,7 +81,7 @@ $(window).scroll(function () {
 	didScroll = true;
 });
 
-setInterval(function scrollHandler() {
+/*setInterval(function scrollHandler() {
 	if (didScroll) {
 		didScroll = false;
 		
@@ -92,7 +92,7 @@ setInterval(function scrollHandler() {
 			hideElem();
 		}
 	}
-}, 30);
+}, 30);*/
 
 //navigation
 function hideElem(){

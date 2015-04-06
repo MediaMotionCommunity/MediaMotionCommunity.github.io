@@ -4,7 +4,9 @@
 	"aboutButton": "À propos",
 	"howitworksButton": "Comment ça marche",
 	"newsHeader": "News de Mediamotion",
-	"newsText": "Intéressé par notre projet ? Vous voulez être tenu au courant des nouvelles versions ? Donnez nous votre e-mail et vous recevrez des informations sur Mediamotion dès qu'il se passe quelque chose !"
+	"newsText": "Intéressé par notre projet ? Vous voulez être tenu au courant des nouvelles versions ? Donnez nous votre e-mail et vous recevrez des informations sur Mediamotion dès qu'il se passe quelque chose !",
+    "ourGiuhub": "Notre Github",
+    "ourBuild": "Notre intégration continue"
   },
   "home": {
 	"headline": "une nouvelle façon d'explorer vos fichiers.",
@@ -17,8 +19,8 @@
 	"innovationsContentB": "En plus d'explorer vos fichiers, vous pouvez aussi lire les types de fichiers supportés par Mediamotion. Les différents lecteurs peuvent être controllés par des gestes, comme l'exploration de fichiers.",
 	"innovationsContentC": "Mediamotion n'est pas un simple explorateur de fichiers où la détection de gestes est un bonus sans conséquence. L'interface est conçue pour être adaptée aux nouvelles possibilitées offertes par la détection de mouvements. Elle comporte une vue en 3D qui prend en compte toutes les directions dans lesquelles une main peut bouger. A la manière dont un appareil à écran tactile utilise des grosses icones pour faciliter son utilisation, Mediamotion affiche plusieurs éléments d'interface qui peuvent être accédés par de simples gestes.",
 	"innovationsContentD": "Mediamotion est construit autout de l'utilisation du Leap Motion Controller, qui gère la détection de gestes. Il suffit de brancher le Leap Motion Controller à votre ordinateur et Mediamotion est prêt à l'emploi !",
-	"main": "Main",
-	"features": "features",
+	"main": "Principales",
+	"features": "Fonctionnalités",
 	"featuresHeadA": "Multi-OS",
 	"featuresHeadB": "Facile à utiliser",
 	"featuresHeadC": "Détection de mouvements",
@@ -64,7 +66,9 @@
 	"itemFebruary2014": "Le départ officiel du projet Mediamotion !",
 	"itemJan2015": "Coming soon !",
 	"contactUsHeader":"Contactez-nous.",
-	"contactUsText": "Nous sommes ouverts aux questions et aux suggestions. Si vous avez quelque chose à demander, une idée à proposer, ou que vous voulez juste nous dire bonjour, envoyez nous un message et nous vous répondrons dès que possible."
+	"contactUsText": "Nous sommes ouverts aux questions et aux suggestions. Si vous avez quelque chose à demander, une idée à proposer, ou que vous voulez juste nous dire bonjour, envoyez nous un message et nous vous répondrons dès que possible.",
+    "team": "Equipe",
+    "contactUs": "Contactez-nous"
   },
   "howitworks": {
 	"downloadApp":"télécharger application",
