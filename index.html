@@ -11,6 +11,20 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-64307204-1', 'auto');
 ga('send', 'pageview');
 
+/**
+ * Utility to wrap the different behaviors between W3C-compliant browsers
+ * and IE when adding event handlers.
+ *
+ * @param {Object} element Object on which to attach the event listener.
+ * @param {string} type A string representing the event type to listen for
+ *     (e.g. load, click, etc.).
+ * @param {function()} callback The function that receives the notification.
+ */
+function addListener(element, type, callback) {
+ if (element.addEventListener) element.addEventListener(type, callback);
+ else if (element.attachEvent) element.attachEvent('on' + type, callback);
+}
+
 </script>
 
 	<title>MediaMotion</title>
@@ -103,9 +117,17 @@ ga('send', 'pageview');
 
 						<!-- CTA Button-->
 						<div class="cta_button_area">
-							<div><button class="btn waves-effect waves-light subscribe-submit">Download</button></div>
+							<div><button class="btn waves-effect waves-light subscribe-submit" id="downloadButtonUp">Download</button></div>
 						</div>
 						<!-- //CTA Button-->
+
+            <script>
+            var downloadLink = document.getElementById('downloadButtonUp');
+            addListener(downloadLink, 'click', function() {
+              ga('send', 'event', 'button', 'click', 'download-main');
+            });
+            </script>
+
 
 						<!--<div class="home_mockups">
 							<img src="images/Explorer.png" alt="" class="img_responsive home_mockups_3"/>
@@ -393,12 +415,19 @@ ga('send', 'pageview');
 				<div class="row align-center">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<h3>Try Mediamotion now!</h3>
-						<div><button class="btn waves-effect waves-light subscribe-submit">Download</button></div>
+						<div><button class="btn waves-effect waves-light subscribe-submit" id="downloadButtonFoot">Download</button></div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- //Subsection: CTA -->
+
+    <script>
+      var downloadLink = document.getElementById('downloadButtonFoot');
+      addListener(downloadLink, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'download-footer');
+      });
+    </script>
 
 		<!-- Footer -->
 		<section id="footer" class="subsection color_bg">
