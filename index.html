@@ -100,11 +100,18 @@ function addListener(element, type, callback) {
 		  		<div class="row">
 		  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 outher">
 			  			<img src="images/mediamotion-logo.png" alt="logo" class="logo inner"/>
-			  			<div class="inner float-right"><p >Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank"><strong>GitHub</strong></a></p></div>
+			  			<div class="inner float-right"><p >Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank" id="forkLink"><strong>GitHub</strong></a></p></div>
 		  			</div>
 		  		</div>
 			</div>
 			<!-- //Logo and navigation -->
+
+      <script>
+      var forkUs = document.getElementById('forkLink');
+      addListener(forkUs, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'fork-us');
+      });
+      </script>
 
 
 			<!-- Main content -->
