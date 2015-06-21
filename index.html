@@ -119,8 +119,15 @@ function addListener(element, type, callback) {
 				<div class="content_container row" >
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  home_content">
 						<h2 class="slogan">A new way of browsing your files.</h2>
-						<h6>Use your <a href="https://www.leapmotion.com/product">Leap Motion Controller</a> to browse your files quickly. <br class="visible-lg visible-md">
+						<h6>Use your <a href="https://www.leapmotion.com/product" target="_blank" id="leapLink">Leap Motion Controller</a> to browse your files quickly. <br class="visible-lg visible-md">
 						Control all your media with your hand.</h6>
+
+            <script>
+            var leapLink = document.getElementById('leapLink');
+            addListener(leapLink, 'click', function() {
+              ga('send', 'event', 'button', 'click', 'leap-link');
+            });
+            </script>
 
 						<!-- CTA Button-->
 						<div class="cta_button_area">
@@ -387,10 +394,17 @@ function addListener(element, type, callback) {
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 						<div class="iconbox content_anim1">
 							<h5>I am a developper and I want to make a new player. Can I?</h5>
-							<p>Of course! In fact, there is a technical documentation available <a href="https://github.com/MediaMotionCommunity/MediaMotion/blob/Unity/Resources/doc/advancedModule/index.md">here</a> that will help you make custom modules for Mediamotion.</p>
+							<p>Of course! In fact, there is a technical documentation available <a href="https://github.com/MediaMotionCommunity/MediaMotion/blob/Unity/Resources/doc/advancedModule/index.md" target="_blank" id="docLink">here</a> that will help you make custom modules for Mediamotion.</p>
 						</div>
 					</div>
 					<!-- //Q2 -->
+
+          <script>
+          var docLink = document.getElementById('docLink');
+          addListener(docLink, 'click', function() {
+            ga('send', 'event', 'button', 'click', 'dev-doc');
+          });
+          </script>
 
 				</div>
 
@@ -443,12 +457,19 @@ function addListener(element, type, callback) {
 		  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 outher">
 		  			<img src="images/mediamotion-logo-small.png" alt="logo" class="logo inner"/>
 		  			<p class="inner">© Copyright 2015</p>
-		  			<p class="float-right inner  visible-lg visible-md">Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank"><strong>GitHub</strong></a></p>
+		  			<p class="float-right inner  visible-lg visible-md">Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank" id="forkUsFooter"><strong>GitHub</strong></a></p>
 		  			</div>
 		  		</div>
 			</div>
 		</section>
 		<!-- //Footer -->
+
+    <script>
+    var forkUsFooter = document.getElementById('forkUsFooter');
+    addListener(forkUsFooter, 'click', function() {
+      ga('send', 'event', 'button', 'click', 'fork-us-footer');
+    });
+    </script>
 
 
 	</div>
