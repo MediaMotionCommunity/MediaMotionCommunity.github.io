@@ -1,248 +1,512 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="MediaMotionApplication">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="telephone=no" name="format-detection">
-    <!--Remove styling of telephone numbers on IOS-->
-    <meta name="description" content="A Template by Designzway Team">
-    <!--Change content-->
-    <meta name="keywords" content="HTML, LESS, CSS, JavaScript">
-    <!--Change content-->
-    <meta name="author" content="Designzway Team">
-    <!--Change content-->
-    <title>MediaMotion - Explore your computer in motion</title>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/external/octions/octicons.css" rel="stylesheet">
-    <link href="assets/css/style.css?v=1" rel="stylesheet">
-    <!-- Stylesheet -->
+<html>
+  <head>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<body ng-controller="appController" ng-class="{error: isErrorPage}" class="page-on-load">
-<div ng-spinner-bar class="page-spinner-bar">
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
-</div>
-<div class="wrapper">
-    <!-- Begin header -->
-    <header>
-        <div class="presentation">
-            <!-- Begin main navigation -->
-            <div class="main-nav">
+ga('create', 'UA-64307204-1', 'auto');
+ga('send', 'pageview');
 
-                <div class="divider-circle"></div>
+/**
+ * Utility to wrap the different behaviors between W3C-compliant browsers
+ * and IE when adding event handlers.
+ *
+ * @param {Object} element Object on which to attach the event listener.
+ * @param {string} type A string representing the event type to listen for
+ *     (e.g. load, click, etc.).
+ * @param {function()} callback The function that receives the notification.
+ */
+function addListener(element, type, callback) {
+ if (element.addEventListener) element.addEventListener(type, callback);
+ else if (element.attachEvent) element.attachEvent('on' + type, callback);
+}
 
-                <nav class="container">
-                    <!-- Logo -->
-                    <div class="logo pull-left">
-                        <a ui-sref="home">
-                            <!-- Remove comments to choose image and add comment to h1 -->
-                            <!--<img class="logo-img" src="images/logo.png" alt="Appic logo">-->
-                            <h1 class="logo-text">Media<span class="text-highlight">Motion</span></h1>
-                        </a>
-                    </div>
-                    <!-- End Logo -->
+</script>
 
-                    <!-- Main navigation-->
-                    <div class="pull-right" id="navigation-box">
-                        <a id="navigation-toggle" href="#">
-                            <span class="menu-icon"></span>
-                        </a>
-                        <ul id="navigation">
-                            <li><a ui-sref="home">{{globalTranslation.homeButton}}</a></li>
-                            <li><a ui-sref="about">{{globalTranslation.aboutButton}}</a></li>
-                            <li><a ui-sref="howitworks">{{globalTranslation.howitworksButton}}</a></li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank">
-                        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
-                    </a>
-                </nav>
-            </div>
-            <!-- End main navigation -->
-        </div>
-        <!-- End presentation-->
-    </header>
-    <!-- End header -->
-    <div ui-view style="min-height: 400px;" id="body-part">
-    </div>
+	<title>MediaMotion</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<meta name="description" content="Mediamotion is a file explorer controlled with hand gestures. Say goodbye to your keyboard and mouse!">
+	<meta name="keywords" content="Mediamotion, EIP, Leap Motion, Epitech Innovative Project, 3D desktop, no mouse, no keyboard, file explorer, media reader, hands-free">
+	
+	<script type="application/ld+json">
+	{ "@context" : "http://schema.org",
+	  "@type" : "Organization",
+	  "name" : "Mediamotion",
+	  "url" : "https://mediamotioncommunity.github.io/",
+	  "logo": "https://mediamotioncommunity.github.io/images/mediamotion-logo.png",
+	  "logo": "https://mediamotioncommunity.github.io/images/mediamotion-logo.png",
+	  "sameAs" : [ "https://www.facebook.com/pages/MediaMotion/1620389194874173",
+		"https://twitter.com/MediaMotion_App"] 
+	}
+	</script>
 
-    <!--Begin footer -->
-    <footer class="footer-wrapper">
-        <!--Begin footer widget-->
-        <div class="container footer-widgets">
-            <div class="row">
-                <div class="col-sm-12 col-md-5 col-lg-6 widget-news">
-                    <h3 class="widget-title">{{globalTranslation.newsHeader}}</h3>
 
-                    <div class="row">
-                        <div class="col-sm-6 col-md-12">
-                            <p class="widget-news__text">{{globalTranslation.newsText}}</p>
-                            <!-- subscribe form -->
-                            <form class="subscribe-form" id="subscribe-form" name="subscribe-form" method="post"
-                                  action="getEmail.php" novalidate>
-                                <input class="subscribe-input" id="input-email" name="input-email" type="email"
-                                       placeholder="your email here" disabled>
-                                <button class="submit-button" id="submit-button" type="submit" disabled>
-                                    <i class="icon-circle icon-circle--thin fa fa-arrow-right"></i>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="col-sm-6 col-md-12">
-                            <address class="widget-contacts">
-                                <span class="widget-contacts__item"><i
-                                        class="icon-circle icon-circle--thin fa fa-envelope"></i><a
-                                        href="mailto:eip-mediamotion@googlegroups.com">MediaMotion Email</a></span>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-8 col-lg-3 widget-tweets">
-                    <h3 class="widget-title"><a href="{{git.html_url}}" target="_blank" id="linkOurGit">{{globalTranslation.ourGiuhub}}</a>
-                    </h3>
-                    <div>
-                        <p><i class="octicon octicon-history"></i> {{git.commit_count}} commits</p>
-                    </div>
-                    <div>
-                        <p><i class="octicon octicon-git-branch"></i> {{git.branche_count}} branches</p>
-                    </div>
-                    <div>
-                        <p><i class="octicon octicon-tag"></i> {{git.release_count}} releases</p>
-                    </div>
-                    <div>
-                        <p><i class="octicon octicon-organization"></i> {{git.contributor_count}} contributors</p>
-                    </div>
-                </div>
-				<div class="col-sm-12 col-md-8 col-lg-3 widget-tweets">
-					<h3 class="widget-title">{{globalTranslation.ourBuild}}</h3>
-					<div>
-						<p class="col-sm-7">LeapMotion Library :</p>
-						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_LeapMotion)/statusIcon"/>
-					</div>
-					<div>
-						<p class="col-sm-7">Unity3D UI : </p>
-						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_Unity)/statusIcon"/>
-					</div>
-					<div>
-						<p class="col-sm-7">Integration : </p>
-						<img class="col-sm-5 integration-img " src="http://163.5.84.206/app/rest/builds/buildType:(id:MediaMotion_Re7)/statusIcon"/>
+	<!-- Included Google Fonts -->
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
+
+	<!-- CSS Files comes here -->
+	<link href="css/grid12.css" rel="stylesheet" media="screen">                              	 <!-- Grid System -->
+	<link href="css/james_typography.css" rel="stylesheet" media="screen">                       <!-- James Framework - TYPOGRAPHY -->
+	<link href="css/main.css" rel="stylesheet" media="screen">                                   <!-- Main CSS file -->
+    <link href="css/color_scheme_light.css" rel="stylesheet" media="screen">                     <!-- Color scheme (dark/light)-->
+	<link href="css/colors/color_palette_mediamotion.css" rel="stylesheet" media="screen">              <!-- Color palette -->
+	<link href="css/rapid-icons.css" rel="stylesheet" media="screen">                            <!-- James Framework - ICONS -->
+	<link href="css/responsivity.css" rel="stylesheet" media="screen">                           <!-- Responsive Fixes -->
+	<link href="css/animate.css" rel="stylesheet" media="screen">                                <!-- Animate - animations -->
+	<link href="css/nivo-lightbox.css" rel="stylesheet" media="screen">                          <!-- Lightbox Styles -->
+    <link href="css/nivo_lightbox_themes/default/default.css" rel="stylesheet" media="screen">   <!-- Lightbox Styles -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">                           <!-- Owl - Carousel -->
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">                      		 <!-- Owl - Carousel -->
+    <link href="css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
+
+	<!-- Modernizer and IE specyfic files -->
+	<script src="js/modernizr.custom.js"></script>
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<link rel="shortcut icon" href="images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body>
+
+	<div id="preloader_container">
+
+	    <!-- Preloader Screen -->
+		<header class="preloader_header">
+	        <div class="preloader_loader">
+	            <svg class="preloader_inner" width="60px" height="60px" viewBox="0 0 80 80">
+	                <path class="preloader_loader_circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	                <path id="preloader_loader_circle" class="preloader_loader_circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	            </svg>
+	        </div>
+	    </header>
+	    <!-- //Preloader Screen -->
+
+
+		<!-- Fullscreen homepage -->
+		<section class="hero_fullscreen background_solid">
+
+
+			<!-- Logo and navigation -->
+		  	<div class="container" >
+		  		<div class="row">
+		  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 outher">
+			  			<img src="images/mediamotion-logo.png" alt="logo" class="logo inner"/>
+			  			<div class="inner float-right"><p >Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank" id="forkLink"><strong>GitHub</strong></a></p></div>
+		  			</div>
+		  		</div>
+			</div>
+			<!-- //Logo and navigation -->
+
+      <script>
+      var forkUs = document.getElementById('forkLink');
+      addListener(forkUs, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'fork-us');
+      });
+      </script>
+
+
+			<!-- Main content -->
+		  	<div class="container align-center" id="main_content">
+				<div class="content_container row" >
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  home_content">
+						<h1 class="title inner">Mediamotion</h1>
+						<h2 class="slogan">A new way of browsing your files.</h2>
+						<h6>Use your <a href="https://www.leapmotion.com/product" target="_blank" id="leapLink">Leap Motion Controller</a> to browse your files quickly. <br class="visible-lg visible-md">
+						Control all your media with your hand.</h6>
+
+            <script>
+            var leapLink = document.getElementById('leapLink');
+            addListener(leapLink, 'click', function() {
+              ga('send', 'event', 'button', 'click', 'leap-link');
+            });
+            </script>
+
+						<!-- CTA Button-->
+						<div class="cta_button_area">
+							<div><a href="https://github.com/MediaMotionCommunity/MediaMotion/releases/download/2015-25/MediaMotion_Win64.zip" target="_blank"><button class="btn waves-effect waves-light subscribe-submit" id="downloadButtonUp">Download</button></a></div>
+						</div>
+						<!-- //CTA Button-->
+
+            <script>
+            var downloadLink = document.getElementById('downloadButtonUp');
+            addListener(downloadLink, 'click', function() {
+              ga('send', 'event', 'button', 'click', 'download-main');
+            });
+            </script>
+
+
+						<!--<div class="home_mockups">
+							<img src="images/Explorer.png" alt="" class="img_responsive home_mockups_3"/>
+							<img src="images/home_mockups_2.png" alt="" class="img_responsive home_mockups_2"/>
+							<img src="images/home_mockups_1.png" alt="" class="img_responsive home_mockups_1"/>
+						</div>-->
+
 					</div>
 				</div>
-            </div>
-        </div>
-        <!--End footer widget -->
-        <!--Begin footer secondary -->
-        <div class="footer-secondary">
+			</div>
+			<!-- //Main content -->
 
-            <div class="divider-circle"></div>
+		</section>
+		<!-- //Homepage -->
 
-            <div class="container">
-                <ul class="social">
-                    <li class="social__item custom-tooltip tooltip--info" title="pinterest">
-                        <a class="icon-circle fa fa-pinterest" href="http://pinterest.com/oliagozha/"
-                           target="_blank"></a>
-                    </li>
-                    <li class="social__item custom-tooltip tooltip--info" title="google">
-                        <a class="icon-circle fa fa-google-plus"
-                           href="https://plus.google.com/u/0/100180333527158639883/posts" target="_blank"></a>
-                    </li>
-                    <li class="social__item custom-tooltip tooltip--info" title="linkedin">
-                        <a class="icon-circle fa fa-linkedin" href="http://ua.linkedin.com/pub/olia-gozha/49/b91/268"
-                           target="_blank"></a>
-                    </li>
-                    <li class="social__item custom-tooltip tooltip--info" title="twitter">
-                        <a class="icon-circle fa fa-twitter" href="http://twitter.com/@OliaGozha" target="_blank"></a>
-                    </li>
-                    <li class="social__item custom-tooltip tooltip--info" title="facebook">
-                        <a class="icon-circle fa fa-facebook"
-                           href="http://www.facebook.com/people/@/http://www.facebook.com/olia.gozha"
-                           target="_blank"></a>
-                    </li>
-                </ul>
-                <div class="copyright">
-                    <small class="small">&copy; MediaMotion, 2014-2015. All rights reserved. By MediaMotion Group.
-                    </small>
-                    <small>Template <a href="http://themeforest.net/user/olechka?ref=olechka">by Designzway</a></small>
-                </div>
-            </div>
-        </div>
-        <!--End footer secondary -->
-    </footer>
-    <!--End footer -->
-</div>
 
-<!--End wrapper -->
+		<!-- Subsection: More info -->
+		<section id="more_info" class="subsection darker_bg align-center ">
+			<div class="container">
+				<div class="row">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!--Script jQuery-->
-<script>window.jQuery || document.write('<script src="external/jquery/jquery-1.11.0.min.js"><\/script>')</script>
-<!--Script jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-<!--Script AngularJs-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs//1.2.28/angular-cookies.min.js"></script>
-<!--Script Angular Cookies-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs//1.2.28/angular-resource.min.js"></script>
-<!--Script Angular Resources-->
-<script src="assets/external/angular/angular-ui-router/angular-ui-router.min.js"></script>
-<!--Script AngularJs Ui Router-->
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<!--Script jQuery UI-->
-<script src="assets/external/jquery/jquery-migrate-1.2.1.min.js"></script>
-<!--Script jQuery for old version jQuery-->
-<script src="assets/external/bootstrap/js/bootstrap.min.js"></script>
-<!--Bootstrap JavaScript-->
-<script src="assets/external/jquery-event/jquery.event.drag-2.2.js"></script>
-<!--Script jquery event Drag-->
-<script src="assets/external/jquery-event/jquery.event.drop-2.2.js"></script>
-<!--Script jquery event Drop-->
-<script src="assets/external/jquery-easing/jquery.easing.1.3.js"></script>
-<!--Script jquery Easing-->
-<script src="assets/external/jquery-roundabout/jquery.roundabout.min.js"></script>
-<!--Script Roundabout-->
-<script src="assets/external/swiper/idangerous.swiper.min.js"></script>
-<!--Script Swiper slider -->
-<script src="assets/external/gozha-nav/jquery.mobile.menu.js"></script>
-<!--Script Mobile menu-->
-<script src="assets/external/modernizr/modernizr.custom.91224.js"></script>
-<!--Script Modernizr-->
-<script src="assets/external/colorbox/jquery.colorbox.js"></script>
-<!--Script Сolorbox-->
-<script src="assets/external/jquery-bxslider/jquery.bxslider.min.js"></script>
-<!--Script Bxslider -->
-<script src="assets/external/swiper/idangerous.swiper.min.js"></script>
-<!--Script Swiper slider -->
-<script src="assets/external/jquery-timeline/jquery.timelineG.js"></script>
-<!--Script Timeline-->
-<script src="assets/external/jquery-fitvids/jquery.fitvids.js"></script>
-<!--Script Fitvids -->
-<script src="app/app.js"></script>
-<!--Script Application-->
-<script src="assets/js/form.js"></script>
-<!--Script Forms -->
-<script src="assets/js/custom.js"></script>
-<!--Script Custom-->
-<!--Begin Directives-->
-<script src="app/directives/spinnerBar.js"></script>
-<!--End Directives-->
-<!--Begin Services-->
-<script src="app/services/translationService.js"></script>
-<script src="app/services/githubService.js"></script>
-<!--End Services-->
-<!--Begin Controllers -->
-<script src="app/controllers/baseController.js"></script>
-<script src="app/controllers/homeController.js"></script>
-<script src="app/controllers/aboutController.js"></script>
-<script src="app/controllers/howitworksController.js"></script>
-<script src="app/controllers/errorController.js"></script>
-<!--End Controllers -->
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="iconbox content_anim1">
+							<div data-icon="&#xe046;" class="iconbox_icon"></div>
+							<div class="iconbox_content">
+								<h5>No mouse needed.</h5>
+								<p>Mediamotion unleashes the power of your hands.</p>
+							</div>
+						</div>
+					</div>
 
-</body>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="iconbox content_anim2">
+							<div data-icon="&#xe061;" class="iconbox_icon"></div>
+							<div class="iconbox_content">
+								<h5>Play them all.</h5>
+								<p> You can play all your media without touching anything.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="iconbox content_anim3">
+							<div data-icon="&#xe07b;" class="iconbox_icon"></div>
+							<div class="iconbox_content">
+								<h5>Adapted interface.</h5>
+								<p> A new 3D interface to browse your files differently. </p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- //Subsection: More info -->
+
+
+		<!-- Subsection: Features -->
+		<section class="subsection" id="features">
+			<div class="container">
+				<div class="row feature_row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 content_anim4">
+						<h3>No mouse needed.</h3>
+						<p>Mediamotion presents a new way of controlling your computer that does not rely on a mouse, a keyboard, or a touchscreen. Explore your files simply with hand gestures.</p>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 align-center content_anim5 deatures_image" >
+						<img src="images/Explorer.jpg" alt="" class="img_responsive"/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 align-center content_anim6 features_image" >
+						<img src="images/ImageViewer.jpg" alt="" class="img_responsive"/>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 content_anim7">
+            <h3>Play all your medias</h3>
+            <p>In addition to exploring your files, you can also read the built-in file types with Mediamotion. Images, Musics, Videos and PDFs, are all included by default. The different players can be controlled with movement detection just like the file explorer.</p>
+					</div>
+				</div>
+
+        <div class="row feature_row">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 content_anim4">
+            <h3>An interface built for motion detection.</h3>
+						<p>Mediamotion is not a simple file explorer with a motion detection gimmick. The interface is made to reflect the new possibilities offered by motion detection. It features a 3D view in order to take into account every direction a hand movement can take.</p>
+						<p>In the same way touchscreen devices use big tiles to ease screen taps, Mediamotion displays several UI elements that can be accessed with simple gestures.</p>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 align-center content_anim5 deatures_image" style="padding-top: 75px;">
+						<img src="images/Wheeltool.jpg" alt="" class="img_responsive"/>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- //Subsection: Features -->
+
+
+		<!-- Subsection: Newspapers -->
+		<!--<section id="newspapers" class="subsection darker_bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center">
+						<div class="intro content_anim8">
+							<h3>Some of the world’s most respected companies trust MDLP!</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim9"><img src="images/reviews_logos/logo1.png" alt=""></div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim10"><img src="images/reviews_logos/logo2.png" alt=""></div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim11"><img src="images/reviews_logos/logo3.png" alt=""></div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim12"><img src="images/reviews_logos/logo4.png" alt=""></div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim13"><img src="images/reviews_logos/logo5.png" alt=""></div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 reviews_logo content_anim14"><img src="images/reviews_logos/logo6.png" alt=""></div>
+				</div>
+
+			</div>
+		</section>-->
+		<!-- //Subsection: Newspapers -->
+
+
+		<!-- Subsection: Screenshots -->
+		<!--<section id="screenshots" class="subsection">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center content_anim15">
+						<div class="intro">
+							<h3>Screenshots</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="row screenshots_gallery">
+					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 content_anim16"><a href="images/screenshots/1.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/1.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 content_anim17"><a href="images/screenshots/2.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/2.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 content_anim18"><a href="images/screenshots/3.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/3.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 content_anim19"><a href="images/screenshots/4.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/4.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim20"><a href="images/screenshots/5.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/5.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim21"><a href="images/screenshots/6.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/6.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim22"><a href="images/screenshots/7.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/7.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim23"><a href="images/screenshots/8.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/8.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim24"><a href="images/screenshots/7.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/9.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+
+					<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 content_anim25"><a href="images/screenshots/10.jpg" data-lightbox-gallery="gallery1">
+					<img src="images/screenshots/10.jpg" class="shadow img_responsive" alt="" width="320"></a></div>
+				</div>
+
+			</div>
+		</section>-->
+		<!-- //Subsection: Screenshots -->
+
+
+		<!-- Subsection: Reviews -->
+		<!--<section id="reviews" class="subsection color_bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 content_anim26">
+						<div class="owl-carousel align-center">
+
+
+							<div class="single_review">
+								<img src="images/review_01.jpg" alt="" class="img-circle">
+								<div class="review_content">
+									<h6>A husband and wife are trying to set up a new password for their computer. The husband puts, "Mypenis," and the wife falls on the ground laughing because on the screen it says, "Error. Not long enough."</h6>
+									<p>- Jenny McLane, Microsoft</p>
+								</div>
+							</div>
+
+
+							<div class="single_review">
+								<img src="images/review_02.jpg" alt="" class="img-circle">
+								<div class="review_content">
+									<h6>Do not be racist; be like Mario. He's an Italian plumber, who was made by the Japanese, speaks English, looks like a Mexican, jumps like a black man, and grabs coins like a Jew!</h6>
+									<p>- Jahn Kovalsky, Apple</p>
+								</div>
+							</div>
+
+
+							<div class="single_review">
+								<img src="images/review_03.jpg" alt="" class="img-circle">
+								<div class="review_content">
+									<h6>I decided to make my password "incorrect" because if I type it in wrong, my computer will remind me, "Your password is incorrect."</h6>
+									<p>- Meggie Patterson, Google</p>
+								</div>
+							</div>
+
+
+							<div class="single_review">
+								<img src="images/review_04.jpg" alt="" class="img-circle">
+								<div class="review_content">
+									<h6>A bank robber pulls out gun points it at the teller, and says, "Give me all the money or you're geography!" The puzzled teller replies, "Did you mean to say 'or you're history?'" The robber says, "Don't change the subject!"</h6>
+									<p>- Billy McDillon </p>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>-->
+		<!-- //Subsection: Reviews -->
+
+
+		<!-- Subsection: FAQ -->
+		<section id="faq" class="subsection">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center content_anim27">
+						<div class="intro">
+							<h3>Frequently Asked Questions</h3>
+							<p>Got questions? We have answers.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row align-left content_anim28">
+
+					<!-- Q1 -->
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox content_anim1">
+							<h5>How do I use Mediamotion?</h5>
+							<p>Easy: just click the download link and save the project to your computer. Mediamotion is available for Windows and OSX. Once you downloaded it, you just have to run it with your Leap Motion Controller plugged-in!</p>
+						</div>
+					</div>
+					<!-- //Q1 -->
+
+					<!-- Q2 -->
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox content_anim1">
+							<h5>I am a developper and I want to make a new player. Can I?</h5>
+							<p>Of course! In fact, there is a technical documentation available <a href="https://github.com/MediaMotionCommunity/MediaMotion/blob/Unity/Resources/doc/advancedModule/index.md" target="_blank" id="docLink">here</a> that will help you make custom modules for Mediamotion.</p>
+						</div>
+					</div>
+					<!-- //Q2 -->
+
+          <script>
+          var docLink = document.getElementById('docLink');
+          addListener(docLink, 'click', function() {
+            ga('send', 'event', 'button', 'click', 'dev-doc');
+          });
+          </script>
+
+				</div>
+
+				<div class="row align-left content_anim29">
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox content_anim1">
+							<h5>Where can I read more about Mediamotion?</h5>
+							<p>If you want more information about the project and the team, as well as find tutorials on how to use the program and developer documentation, click <b>here</b>.</p>
+						</div>
+					</div>
+					<!--
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox content_anim1">
+							<h5>What payment types do you accept?</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					-->
+				</div>
+
+			</div>
+		</section>
+		<!-- //Subsection: FAQ -->
+
+		<!-- Subsection: CTA -->
+		<section class="subsection darker_bg">
+			<div class="container">
+				<div class="row align-center">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h3>Try Mediamotion now!</h3>
+						<div><a href="https://github.com/MediaMotionCommunity/MediaMotion/releases/download/2015-25/MediaMotion_Win64.zip" target="_blank"><button class="btn waves-effect waves-light subscribe-submit" id="downloadButtonFoot">Download</button></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //Subsection: CTA -->
+
+    <script>
+      var downloadLink = document.getElementById('downloadButtonFoot');
+      addListener(downloadLink, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'download-footer');
+      });
+    </script>
+
+		<!-- Footer -->
+		<section id="footer" class="subsection color_bg">
+		  	<div class="container" >
+		  		<div class="row ">
+		  			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 outher">
+		  			<img src="images/mediamotion-logo-small.png" alt="logo" class="logo inner"/>
+		  			<p class="inner">© Copyright 2015</p>
+					<a href="https://twitter.com/MediaMotion_App"><img src="images/TwitterLogo.png" alt="Twitter" class="logo inner" style="width: 32px; height: 32px; margin-left: 27%;"/></a>
+					<a href="https://www.facebook.com/mediamotion.rocks"><img src="images/FB-f-Logo__blue_50.png" alt="Twitter" class="logo inner" style="width: 32px; height: 32px;"/></a>
+		  			<p class="float-right inner  visible-lg visible-md">Fork us on <a href="https://github.com/MediaMotionCommunity/MediaMotion" target="_blank" id="forkUsFooter"><strong>GitHub</strong></a></p>
+		  			</div>
+		  		</div>
+			</div>
+		</section>
+		<!-- //Footer -->
+
+    <script>
+    var forkUsFooter = document.getElementById('forkUsFooter');
+    addListener(forkUsFooter, 'click', function() {
+      ga('send', 'event', 'button', 'click', 'fork-us-footer');
+    });
+    </script>
+
+
+	</div>
+	<!-- //preloader -->
+
+
+	<!-- JavaScript plugins comes here -->
+    <script src="js/jquery-2.1.3.min.js"></script>        <!-- jQuery -->
+    <script src="js/jquery.easing.min.js"></script>       <!-- jQuery easing -->
+    <script src="js/jquery.cycle.all.min.js"></script>    <!-- jQuery cycle -->
+    <script src="js/materialize.js"></script>     		  <!-- Materialize -->
+    <script src="js/classie.js"></script>                 <!-- Class helper function -->
+	<script src="js/pathLoader.js"></script>              <!-- Preloader Loading Animation -->
+	<script src="js/preloader.js"></script>               <!-- Preloader -->
+    <script src="js/retina.js"></script>                  <!-- Retina.js - support for HiDPI Displays -->
+    <script src="js/waypoints.min.js"></script>           <!-- Waypoints -->
+    <script src="js/nivo-lightbox.min.js"></script>       <!-- Lightbox/Modalbox -->
+    <script src="js/owl.carousel.js"></script>      	  <!-- Owl Carousel -->
+    <script src="js/main.js"></script>                    <!-- Main Js file -->
+
+  </body>
 </html>
