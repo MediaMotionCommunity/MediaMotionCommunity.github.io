@@ -2,6 +2,7 @@ var searchData=
 [
   ['makeactive',['MakeActive',['../class_arc_maker.html#a6b6e9ac2d010c91779e9e6cc632c2b73',1,'ArcMaker']]],
   ['makeinactive',['MakeInactive',['../class_arc_maker.html#a876f828351e6ee12eeb551aec9009627',1,'ArcMaker']]],
+  ['media',['Media',['../class_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_models_1_1_media.html#ad2b2924f84e93849eadfd92c0dce6332',1,'MediaMotion::Modules::VideoViewer::Services::VLC::Models::Media']]],
   ['moduleinstance',['ModuleInstance',['../class_media_motion_1_1_core_1_1_services_1_1_module_manager_1_1_models_1_1_module_instance.html#a59c7428bfed024d2e6e4a35cd56c8be1',1,'MediaMotion::Core::Services::ModuleManager::Models::ModuleInstance']]],
   ['modulemanagerservice',['ModuleManagerService',['../class_media_motion_1_1_core_1_1_services_1_1_module_manager_1_1_module_manager_service.html#a2be152b4c69fd3ed9a520beff4e765c2',1,'MediaMotion::Core::Services::ModuleManager::ModuleManagerService']]],
   ['modulenotfoundexception',['ModuleNotFoundException',['../class_media_motion_1_1_core_1_1_exceptions_1_1_module_not_found_exception.html#ab3cac81194c77a96e48b4c6e5847cba1',1,'MediaMotion.Core.Exceptions.ModuleNotFoundException.ModuleNotFoundException(string Name)'],['../class_media_motion_1_1_core_1_1_exceptions_1_1_module_not_found_exception.html#a0a715a6e880a24bba660ca24f22737b7',1,'MediaMotion.Core.Exceptions.ModuleNotFoundException.ModuleNotFoundException(string Name, Exception Parent)']]],
@@ -10,5 +11,6 @@ var searchData=
   ['movefrom',['MoveFrom',['../classi_tween.html#adb177905bcbfb110ffda432f4a70e5e4',1,'iTween.MoveFrom(GameObject target, Vector3 position, float time)'],['../classi_tween.html#a9ab93b8fb30047815cb0bc1c3d238a6a',1,'iTween.MoveFrom(GameObject target, Hashtable args)']]],
   ['movesidebar',['MoveSidebar',['../class_media_motion_1_1_modules_1_1_explorer_1_1_controllers_1_1_sidebar_controller.html#a6a44036513dec254f64e3ba8654e3cba',1,'MediaMotion::Modules::Explorer::Controllers::SidebarController']]],
   ['moveto',['MoveTo',['../classi_tween.html#a43c9a90725b915f209b1cc20d3d2cad4',1,'iTween.MoveTo(GameObject target, Vector3 position, float time)'],['../classi_tween.html#adf78ac696bcd58a535e358ea71248aef',1,'iTween.MoveTo(GameObject target, Hashtable args)']]],
-  ['moveupdate',['MoveUpdate',['../classi_tween.html#aea63a8c5413e7e150bd96b45a7db39c1',1,'iTween.MoveUpdate(GameObject target, Hashtable args)'],['../classi_tween.html#ad94414de0e8b270528a2d03020176b3d',1,'iTween.MoveUpdate(GameObject target, Vector3 position, float time)']]]
+  ['moveupdate',['MoveUpdate',['../classi_tween.html#aea63a8c5413e7e150bd96b45a7db39c1',1,'iTween.MoveUpdate(GameObject target, Hashtable args)'],['../classi_tween.html#ad94414de0e8b270528a2d03020176b3d',1,'iTween.MoveUpdate(GameObject target, Vector3 position, float time)']]],
+  ['mupdfservice',['MuPDFService',['../class_media_motion_1_1_modules_1_1_p_d_f_viewer_1_1_services_1_1_mu_p_d_f_1_1_mu_p_d_f_service.html#a8d43271b3b9923abf865bcb87e890b5a',1,'MediaMotion::Modules::PDFViewer::Services::MuPDF::MuPDFService']]]
 ];

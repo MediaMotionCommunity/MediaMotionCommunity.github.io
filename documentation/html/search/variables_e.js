@@ -7,7 +7,7 @@ var searchData=
   ['selectionradius',['SelectionRadius',['../class_menu_behavior.html#a6512eb7306bb5cdcaada7ed24100c7ee',1,'MenuBehavior']]],
   ['selectionsnapdistance',['SelectionSnapDistance',['../class_menu_behavior.html#a3fd098c5fad65161a726512396564f94',1,'MenuBehavior']]],
   ['selectionsnaptime',['SelectionSnapTime',['../class_menu_behavior.html#adbb2e5f5d66b43b356a891f0dc4de930',1,'MenuBehavior']]],
-  ['sideelements',['sideElements',['../class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_3a2414bf22551d9475a238d4d1a33dcd2.html#ab1daceaf7ecf312d04bfc8da99958e26',1,'MediaMotion::Core::Services::Playlist::Models::Abstracts::ASlideshow&lt; Module, TileScript, ElementScript &gt;']]],
+  ['sideelements',['sideElements',['../class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_37d1825914ab241649a1e2eead57c4147.html#a57ab31d24b92988c154bb1f70111a162',1,'MediaMotion::Core::Services::Playlist::Models::Abstracts::ASlideshow&lt; Module, Child, TileScript, ElementScript, FloorScript, BackgroundScript &gt;']]],
   ['spritescalingfactor',['SpriteScalingFactor',['../class_menu_behavior.html#ab66cc63df0daf9e3269b5405834a49e6',1,'MenuBehavior']]],
   ['startangle',['StartAngle',['../class_arc_maker.html#ad44006c5e58d2aba06db022ccaeb6a77',1,'ArcMaker']]],
   ['starthighlight',['StartHighlight',['../class_menu_behavior.html#a22fa77dd0999af9581de827bdffbfd42',1,'MenuBehavior']]]

@@ -24,7 +24,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">MediaMotion
-   &#160;<span id="projectnumber">2.4</span>
+   &#160;<span id="projectnumber">2.6</span>
    </div>
   </td>
  </tr>
@@ -129,9 +129,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>LayoutOriginalAspectRatio
 : <a class="el" href="class_menu_mover_behavior.html#a85121288c8e2ff9d9fa4a07943b0e6bb">MenuMoverBehavior</a>
 </li>
+<li>LeaveFullscreen()
+: <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_b002e5b7a2f36843e579c2611a9a8969b.html#af5295ed670535dc9e1cfe1af51e094d5">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowBackground&lt; Module, Child &gt;</a>
+, <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_e43e3a05f43e1bab7d680538f3217b0f2.html#ab1f1ca2c5b41550e7941f6b78db8217d">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowEnvironment&lt; Module, Child &gt;</a>
+, <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_fe83706efa78a39e90b2fa1195a850c0f.html#a68bd901881c7ff776365a49fcf6071db">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowFloor&lt; Module, Child &gt;</a>
+, <a class="el" href="class_media_motion_1_1_modules_1_1_video_viewer_1_1_controllers_1_1_slideshow_tile_controller.html#ac51a737a19313f2190bc4d114660ec20">MediaMotion.Modules.VideoViewer.Controllers.SlideshowTileController</a>
+</li>
 <li>Length
 : <a class="el" href="interface_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_interfaces_1_1_i_playlist_service.html#a2b9659015a745b997d20144d4c1245ec">MediaMotion.Core.Services.Playlist.Interfaces.IPlaylistService</a>
 , <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_playlist_service.html#a96dc983cc4a672b5fe2c1e3e1eae41e1">MediaMotion.Core.Services.Playlist.PlaylistService</a>
+</li>
+<li>Level
+: <a class="el" href="struct_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_bindings_1_1_lib_v_l9a1c82248f578080bf82c6a697713b53.html#a88a8a58a82e09d3440ad3bf84f0b3ccd">MediaMotion.Modules.VideoViewer.Services.VLC.Bindings.LibVLC.libvlc_media_track_info_t</a>
+</li>
+<li>Lines
+: <a class="el" href="interface_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_models_1_1_interfaces_1_1_i_player.html#a366d62d8d38e23d17dfd68d830f2f8b0">MediaMotion.Modules.VideoViewer.Services.VLC.Models.Interfaces.IPlayer</a>
+, <a class="el" href="class_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_models_1_1_player.html#aaa5ba21d3d72e2657ad472550810f1c2">MediaMotion.Modules.VideoViewer.Services.VLC.Models.Player</a>
 </li>
 <li>LineSpacing
 : <a class="el" href="class_media_motion_1_1_modules_1_1_explorer_1_1_controllers_1_1_explorer_controller.html#a356b791b0c170d833614c35b4a01ca48">MediaMotion.Modules.Explorer.Controllers.ExplorerController</a>
@@ -142,27 +155,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="interface_media_motion_1_1_core_1_1_models_1_1_interfaces_1_1_i_wrapper.html#a084ec58dc178ab3a15b32a988b72a844">MediaMotion.Core.Models.Interfaces.IWrapper</a>
 , <a class="el" href="interface_media_motion_1_1_core_1_1_services_1_1_module_manager_1_1_interfaces_1_1_i_module_manager_service.html#a8c7e1b670352c972b44feb719bffee3a">MediaMotion.Core.Services.ModuleManager.Interfaces.IModuleManagerService</a>
 , <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_module_manager_1_1_module_manager_service.html#a92def3f99e583a14eb196ad4cc2c183e">MediaMotion.Core.Services.ModuleManager.ModuleManagerService</a>
-</li>
-<li>LoadFile()
-: <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_t7f317342efe9ec2cc74c15aea7c10131.html#a205ab4cdbf3a0c175213b887ae5d7eb0">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowTile&lt; Module, Child &gt;</a>
-, <a class="el" href="interface_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_interfaces_1_1_i_slideshow_tile.html#ac3e0c8b3ce326a84854f18ad341cb144">MediaMotion.Core.Services.Playlist.Models.Interfaces.ISlideshowTile</a>
+, <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_t7f317342efe9ec2cc74c15aea7c10131.html#a82441d9dd97d6efa3d40b79d8626b16e">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowTile&lt; Module, Child &gt;</a>
+, <a class="el" href="interface_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_interfaces_1_1_i_slideshow_tile.html#a6dcc681ef9bcd3df4e8c7a2ca6dd69de">MediaMotion.Core.Services.Playlist.Models.Interfaces.ISlideshowTile</a>
 </li>
 <li>LoadTexture2D()
 : <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_playlist_1_1_models_1_1_abstracts_1_1_a_slideshow_t7f317342efe9ec2cc74c15aea7c10131.html#a2c9996228db3f6de4a1886f1eb85f698">MediaMotion.Core.Services.Playlist.Models.Abstracts.ASlideshowTile&lt; Module, Child &gt;</a>
 , <a class="el" href="class_media_motion_1_1_modules_1_1_image_viewer_1_1_controllers_1_1_slideshow_tile_controller.html#ad24d53bba3406920bbb30bf1be7fdb6f">MediaMotion.Modules.ImageViewer.Controllers.SlideshowTileController</a>
+, <a class="el" href="class_media_motion_1_1_modules_1_1_p_d_f_viewer_1_1_controllers_1_1_slideshow_tile_controller.html#aa03fae545053b40772ea2758c6b9efae">MediaMotion.Modules.PDFViewer.Controllers.SlideshowTileController</a>
+, <a class="el" href="class_media_motion_1_1_modules_1_1_video_viewer_1_1_controllers_1_1_slideshow_tile_controller.html#a0ade2250e3203d0da9fe1781007a6694">MediaMotion.Modules.VideoViewer.Controllers.SlideshowTileController</a>
 </li>
 <li>LoadWrapper()
 : <a class="el" href="class_media_motion_1_1_core_1_1_services_1_1_input_1_1_input_service.html#af691880280972090e18356990f2c8a1f">MediaMotion.Core.Services.Input.InputService</a>
 , <a class="el" href="interface_media_motion_1_1_core_1_1_services_1_1_input_1_1_interfaces_1_1_i_input_service.html#aeff3cfb418317ddb1c00a36b392c69d3">MediaMotion.Core.Services.Input.Interfaces.IInputService</a>
 </li>
+<li>Lock
+: <a class="el" href="interface_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_models_1_1_interfaces_1_1_i_player.html#a80d1a6d1b013afcd333a96f310e075a7">MediaMotion.Modules.VideoViewer.Services.VLC.Models.Interfaces.IPlayer</a>
+, <a class="el" href="class_media_motion_1_1_modules_1_1_video_viewer_1_1_services_1_1_v_l_c_1_1_models_1_1_player.html#a79243e7ea78412a15a4fc3bceece5d8d">MediaMotion.Modules.VideoViewer.Services.VLC.Models.Player</a>
+</li>
 <li>LookFrom()
 : <a class="el" href="classi_tween.html#a1fc4d542856157e0f46fad2cf95cb60c">iTween</a>
 </li>
 <li>LookTo()
-: <a class="el" href="classi_tween.html#a80fb98726c7e70c74a3ea54543b1d2fd">iTween</a>
+: <a class="el" href="classi_tween.html#a5c70b7c291f75150491ff0da752aeb03">iTween</a>
 </li>
 <li>LookUpdate()
-: <a class="el" href="classi_tween.html#a473071ef946a7b875bb0917a707591cd">iTween</a>
+: <a class="el" href="classi_tween.html#a630734f2edbcf2268d3c947d021cae18">iTween</a>
 </li>
 <li>loop
 : <a class="el" href="classi_tween.html#a908edecd0a94e0fac374d9adb82b2968ae48b981fb62db33b98a27fc6cf8bf40a">iTween</a>
@@ -178,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 24 2015 23:49:52 for MediaMotion by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 8 2015 14:59:53 for MediaMotion by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
